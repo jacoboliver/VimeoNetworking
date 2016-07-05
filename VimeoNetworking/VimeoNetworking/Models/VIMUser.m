@@ -187,6 +187,10 @@
     {
         self.accountType = VIMUserAccountTypePro;
     }
+    else if ([self.account isEqualToString:@"business"])
+    {
+        self.accountType = VIMUserAccountTypeBusiness;
+    }
     else if ([self.account isEqualToString:@"basic"])
     {
         self.accountType = VIMUserAccountTypeBasic;
@@ -236,6 +240,9 @@
             break;
         case VIMUserAccountTypePro:
             return @"pro";
+            break;
+        case VIMUserAccountTypeBusiness:
+            return @"business";
             break;
         case VIMUserAccountTypeStaff:
             return @"staff";
